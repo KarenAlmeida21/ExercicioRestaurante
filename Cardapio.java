@@ -1,5 +1,7 @@
 package SistemaRestaurante;
 
+import sistema_imobiliario.Morador;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +17,10 @@ public class Cardapio {
 
     public List<Prato> getPratosDoDia() {
         return pratosDoDia;
+    }
+
+    public void adicionarPrato(Prato novoPrato) {
+        pratosDoDia.add(novoPrato);
     }
 
     @Override

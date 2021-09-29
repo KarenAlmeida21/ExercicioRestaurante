@@ -14,7 +14,9 @@ public class Ingrediente {
         return nome;
     }
 
+Ingrediente tomate= new Ingrediente();
     @Override
+
     public String toString() {
         return "Ingredientes: ";
     }

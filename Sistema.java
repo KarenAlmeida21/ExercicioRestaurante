@@ -1,7 +1,4 @@
 package SistemaRestaurante;
-
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class Sistema {
@@ -47,22 +44,25 @@ public class Sistema {
             int opcaoMenu = capturarDados("Digite a opção selecionada: ").nextInt();
 
             if (opcaoMenu == 1) {
-                //cadastrar novo ingrediente
+                //cadastrar ingrediente
+
             }
+
             if (opcaoMenu == 2) {
-                //cadastrar novo prato
+                cadastrarPrato().getListaIngrediente();
+
             } else if(opcaoMenu==3){
                 //exibir ingredientes
             }else if(opcaoMenu==4){
-                //exibir pratos
-            }else {
+                System.out.println();}
+            else {
                 System.out.println("Volte Sempre");
-                menu = false;
+                menu = false;}
             }
         }
 
 
     }
-}
+
 
 

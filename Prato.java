@@ -1,5 +1,7 @@
 package SistemaRestaurante;
 
+import sistema_imobiliario.Morador;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +15,7 @@ public class Prato {
 
     public Prato(String nome, double valor) {
         this.nome = nome;
-        this.valor=valor;
+        this.valor = valor;
 
     }
 
@@ -29,13 +31,19 @@ public class Prato {
         return valor;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-
     public List<Ingrediente> getListaIngrediente() {
         return listaIngrediente;
     }
+
+    Prato prato1 = new Prato();
+
+    public void adicionarIngrediente(Ingrediente novoIngrediente) {
+        listaIngrediente.add(novoIngrediente);
+        //
+
+
+    }
+
 
     @Override
     public String toString() {
