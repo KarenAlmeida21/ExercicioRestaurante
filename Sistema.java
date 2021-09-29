@@ -1,5 +1,7 @@
 package SistemaRestaurante;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class Sistema {
@@ -21,18 +23,19 @@ public class Sistema {
 
     //cadastrando ingrediente
     public static Ingrediente cadastrarIngrediente() {
-        String nomeIngrediente = capturarDados("Digite o nome do novo ingrediente: ").nextLine();
-        Ingrediente novoiIngrediente = new Ingrediente(nomeIngrediente);
-        return novoiIngrediente;
+        String nome = capturarDados("Digite o nome do novo ingrediente: ").nextLine();
+        Ingrediente novoIngrediente = new Ingrediente(nome);
+        return novoIngrediente;
     }
 
 
     public static Prato cadastrarPrato() {
-        String nomePrato = capturarDados("Digite o nome do novo prato: ").nextLine();
+        String nome = capturarDados("Digite o nome do novo prato: ").nextLine();
         double valor = capturarDados("Digite o valor do novo prato: R$ ").nextDouble();
-        Prato novoPrato = new Prato(nomePrato, valor);
+        Prato novoPrato = new Prato(nome, valor);
         return novoPrato;
     }
+
 
     //executando
     public static void executar() {
@@ -43,15 +46,23 @@ public class Sistema {
             menu();
             int opcaoMenu = capturarDados("Digite a opção selecionada: ").nextInt();
 
-            if(opcaoMenu == 1){
-
+            if (opcaoMenu == 1) {
+                //cadastrar novo ingrediente
             }
-
-
+            if (opcaoMenu == 2) {
+                //cadastrar novo prato
+            } else if(opcaoMenu==3){
+                //exibir ingredientes
+            }else if(opcaoMenu==4){
+                //exibir pratos
+            }else {
+                System.out.println("Volte Sempre");
+                menu = false;
+            }
         }
+
+
     }
-
-
 }
 
 
