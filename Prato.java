@@ -5,10 +5,15 @@ import java.util.List;
 
 public class Prato {
     private String nome;
+    private double valor;
     List<Ingrediente> listaIngrediente = new ArrayList<>();
 
-    public Prato(String nome) {
+    public Prato() {
+    }
+
+    public Prato(String nome, double valor) {
         this.nome = nome;
+        this.valor=valor;
 
     }
 
@@ -18,6 +23,18 @@ public class Prato {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public List<Ingrediente> getListaIngrediente() {
+        return listaIngrediente;
     }
 
     @Override
