@@ -10,7 +10,7 @@ public class Prato {
     private double valor;
     List<Ingrediente> listaIngrediente = new ArrayList<>();
 
-    public Prato() {
+    public Prato(String arroz) {
     }
 
     public Prato(String nome, double valor) {
@@ -20,10 +20,12 @@ public class Prato {
     }
 
     public String getNome() {
+
         return nome;
     }
 
     public void setNome(String nome) {
+
         this.nome = nome;
     }
 
@@ -31,23 +33,25 @@ public class Prato {
         return valor;
     }
 
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
     public List<Ingrediente> getListaIngrediente() {
         return listaIngrediente;
     }
 
-    Prato prato1 = new Prato();
-
     public void adicionarIngrediente(Ingrediente novoIngrediente) {
+
         listaIngrediente.add(novoIngrediente);
-        //
-
-
     }
+
 
 
     @Override
     public String toString() {
-        return "\n Nome do prato: " + nome +
-                "\n Ingredientes: " + listaIngrediente;
+        return "\n Nome do prato: " + getNome()+
+                "\n Valor: " + getValor() +
+                "\n Ingredientes: " + getListaIngrediente();
     }
 }

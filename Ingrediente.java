@@ -14,11 +14,14 @@ public class Ingrediente {
         return nome;
     }
 
-Ingrediente tomate= new Ingrediente();
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     @Override
 
     public String toString() {
-        return "Ingredientes: ";
+        return "Ingredientes: "+ getNome();
     }
 
 }

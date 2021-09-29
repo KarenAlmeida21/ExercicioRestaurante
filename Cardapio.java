@@ -7,16 +7,30 @@ import java.util.List;
 
 public class Cardapio {
     List<Prato> pratosDoDia = new ArrayList<>();
+    private String nome;
 
     public Cardapio() {
     }
 
+    public Cardapio(String nome) {
+        this.nome = nome;
+    }
+
     public Cardapio(List<Prato> pratosDoDia) {
+
         this.pratosDoDia = pratosDoDia;
     }
 
     public List<Prato> getPratosDoDia() {
         return pratosDoDia;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public void adicionarPrato(Prato novoPrato) {
@@ -25,7 +39,7 @@ public class Cardapio {
 
     @Override
     public String toString() {
-        return "\nCardápio : " +
+        return "\nCardápio : " + getNome() +
                 "\n Prato do Dia: " + pratosDoDia;
     }
 
