@@ -16,7 +16,7 @@ public class Sistema {
         System.out.println("Digite 2- Para cadastrar um novo prato");
         System.out.println("Digite 3-Para exibir os ingredientes cadastrados");
         System.out.println("Digite 4- Para exibir o cardápio");
-        int opcaoMenu = new Scanner(System.in).nextInt();
+
     }
 
     //cadastrando ingrediente
@@ -27,22 +27,31 @@ public class Sistema {
     }
 
 
-        //cadastrando prato
-        //  public static Imovel cadastrarImovel(){
-        //        String endereco = capturarDados("Digite seu endereço: ").nextLine();
-        //        double valorAluguel = capturarDados("Digite o valor do aluguel: ").nextDouble();
-        //
-        //        Imovel imovel = new Imovel(endereco, valorAluguel);
-        //        return imovel;
-        //    }
-        public static Prato cadastrarPrato () {
-            String nomePrato = capturarDados("Digite o nome do novo prato: ").nextLine();
-            double valor = capturarDados("Digite o valor do novo prato: R$ ").nextDouble();
-            Prato novoPrato = new Prato(nomePrato, valor);
-            return novoPrato;
-        }
-
-
+    public static Prato cadastrarPrato() {
+        String nomePrato = capturarDados("Digite o nome do novo prato: ").nextLine();
+        double valor = capturarDados("Digite o valor do novo prato: R$ ").nextDouble();
+        Prato novoPrato = new Prato(nomePrato, valor);
+        return novoPrato;
     }
+
+    //executando
+    public static void executar() {
+        boolean menu = true;
+        Cardapio restaurante1 = new Cardapio();
+
+        while (menu) {
+            menu();
+            int opcaoMenu = capturarDados("Digite a opção selecionada: ").nextInt();
+
+            if(opcaoMenu == 1){
+
+            }
+
+
+        }
+    }
+
+
+}
 
 
