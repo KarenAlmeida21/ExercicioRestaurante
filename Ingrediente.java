@@ -21,7 +21,8 @@ public class Ingrediente {
     @Override
 
     public String toString() {
-        return "Ingredientes: "+ getNome();
+        return "Ingredientes: " + getNome();
+
     }
 
 }

@@ -26,6 +26,7 @@ public class Cardapio {
     }
 
     public String getNome() {
+
         return nome;
     }
 
@@ -37,10 +38,11 @@ public class Cardapio {
         pratosDoDia.add(novoPrato);
     }
 
+
     @Override
     public String toString() {
-        return "\nCardápio : " + getNome() +
-                "\n Prato do Dia: " + pratosDoDia;
+        return "Cardapio " +
+                " Nome: " + nome +
+                " Prato do dia: " + pratosDoDia;
     }
-
 }
