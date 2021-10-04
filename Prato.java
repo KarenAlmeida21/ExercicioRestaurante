@@ -1,14 +1,12 @@
 package SistemaRestaurante;
 
-import sistema_imobiliario.Morador;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Prato {
     private String nome;
     private double valor;
-   public List<Ingrediente> listaIngrediente = new ArrayList<>();
+    public List<Ingrediente> listaIngrediente = new ArrayList<>();
 
     public Prato() {
     }
@@ -16,7 +14,6 @@ public class Prato {
     public Prato(String nome, double valor) {
         this.nome = nome;
         this.valor = valor;
-
     }
 
     public String getNome() {
@@ -30,6 +27,7 @@ public class Prato {
     }
 
     public double getValor() {
+
         return valor;
     }
 
@@ -37,21 +35,20 @@ public class Prato {
         this.valor = valor;
     }
 
-    public List<Ingrediente> getListaIngrediente() {
-        return listaIngrediente;
+    public void adicionarIngrediente (Ingrediente ingrediente) {
+
+        listaIngrediente.add(ingrediente);
     }
 
-    public void adicionarIngrediente(Ingrediente novoIngrediente) {
-
-        listaIngrediente.add(novoIngrediente);
-    }
 
 
 
     @Override
     public String toString() {
-        return "\n Nome do prato: " + getNome()+
+        return "\n Nome do prato: " + getNome() +
                 "\n Valor: " + getValor() +
-                "\n Ingredientes: " + getListaIngrediente();
+                "\n Ingredientes: " + listaIngrediente;
     }
+
+
 }
