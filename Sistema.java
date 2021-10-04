@@ -25,7 +25,7 @@ public class Sistema {
 
     public static Ingrediente adicionarIngrediente() {
         String nome = obterDados("Digite o nome do novo ingrediente:").nextLine();
-        System.out.println("Ingrediente adicionado");
+        System.out.println("Ingrediente adicionado\n");
         Ingrediente novoIngrediente = new Ingrediente(nome);
         return novoIngrediente;
     }
@@ -46,7 +46,7 @@ public class Sistema {
         menu();
       Cardapio cardapio = new Cardapio();
         while (menu){
-            int opcaoMenu = obterDados("Digite a opção escolhida: ").nextInt();
+            int opcaoMenu = obterDados("\nDigite a opção escolhida: ").nextInt();
             if(opcaoMenu == 1){
                 adicionarIngrediente();
             }if(opcaoMenu == 2){

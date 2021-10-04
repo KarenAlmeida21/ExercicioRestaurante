@@ -8,9 +8,9 @@ import java.util.List;
 public class Prato {
     private String nome;
     private double valor;
-    List<Ingrediente> listaIngrediente = new ArrayList<>();
+   public List<Ingrediente> listaIngrediente = new ArrayList<>();
 
-    public Prato(String arroz) {
+    public Prato() {
     }
 
     public Prato(String nome, double valor) {
