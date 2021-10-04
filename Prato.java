@@ -14,6 +14,7 @@ public class Prato {
     public Prato(String nome, double valor) {
         this.nome = nome;
         this.valor = valor;
+
     }
 
     public String getNome() {

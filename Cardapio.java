@@ -1,7 +1,5 @@
 package SistemaRestaurante;
 
-import sistema_imobiliario.Morador;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -2,12 +2,6 @@ package SistemaRestaurante;
 
 import java.util.Scanner;
 
-//Vocês deverão criar um sistema de cadastros de pratos do dia de um restaurante.
-// O sistema deve permitir o cadastro de um prato e todos os seus ingredientes.
-// Ao final do programa deve ser exibido o nome do prato, seu valor e quais são seu ingredientes.
-//Entrega Mínima: Sistema permite cadastrar um prato com valor, nome e ingredientes e no final exibir os valores.
-//Entrega Máxima: O sistema permite Adicionar mais de um prato antes de exibir o cardápio.
-
 public class Sistema {
 
 
@@ -25,7 +19,7 @@ public class Sistema {
 
 
     public static Prato prato() {
-        String nome = obterDados("Digite o nome do parto: ").nextLine();
+        String nome = obterDados("Digite o nome do prato: ").nextLine();
         double valor = obterDados("Digite o valor do prato: ").nextDouble();
         System.out.println("Prato adicionado\n");
         Prato prato = new Prato(nome, valor);
@@ -36,6 +30,7 @@ public class Sistema {
     public static Ingrediente adicionarIngrediente() {
         String nome = obterDados("Digite o nome do ingrediente a ser adicionado: ").nextLine();
         Ingrediente ingrediente = new Ingrediente();
+        ingrediente.setNome(nome);
         return ingrediente;
     }
 
